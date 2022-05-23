@@ -1,0 +1,29 @@
+header {
+    position: relative;
+    min-height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    nav {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include breakpoint-up(large) {
+            flex-direction: row;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            
+            input {
+                min-width: 10%;
+            }
+        }
+    }
+}
