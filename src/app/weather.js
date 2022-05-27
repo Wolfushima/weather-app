@@ -1,4 +1,5 @@
 import getWeatherInfo from './api-functions';
+import icons from './utils/icons';
 
 const weather = {
     name: document.querySelector('.weather__location'),
@@ -13,7 +14,7 @@ const weather = {
         weather.metric.addEventListener('click', weather.handleMetricUnit);
         weather.imperial.addEventListener('click', weather.handleImperialUnit);
     },
-    update: (name, date, description, temp, humidity, speed, country, unit) => {
+    update: (name, date, description, temp, humidity, speed, country, icon, unit) => {
         weather.name.textContent = `${name}, ${country}`;
         weather.date.textContent = date;
         weather.description.textContent = description;
@@ -24,6 +25,14 @@ const weather = {
         } else if (unit === 'metric') {
             weather.wind.textContent = `Wind Speed: ${speed}km/h`;
         }
+        weather.handleIcon(icon);
+    },
+    handleIcon: (icon) => {
+        const currentIcon = document.querySelector('.weather__icon');
+        const newIcon = icons[icon].toString();
+        const i = document.createElement('i');
+        i.classList.add('weather__icon', 'bi', newIcon);
+        currentIcon.replaceWith(i);
     },
     handleImperialUnit: () => {
         getWeatherInfo(weather.name.textContent, 'imperial');

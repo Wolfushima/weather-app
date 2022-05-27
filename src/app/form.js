@@ -8,7 +8,7 @@ const form = {
     },
     search: (e) => {
         e.preventDefault();
-        getWeatherInfo(form.input.value);
+        getWeatherInfo(form.input.value, 'imperial');
         form.selector.reset();
     },
 };
