@@ -30,6 +30,10 @@
     &__info {
         grid-area: info;
         align-items:flex-start;
+
+        .weather__description {
+            text-transform: capitalize;
+        }
     }
 
     &__details {

@@ -1,7 +1,7 @@
-import test1 from './utils/example1';
-import test2 from './utils/example2';
+import form from './form';
+import weather from './weather';
 
-export default function run() {
-    test1();
-    test2();
+export default function runApp() {
+    weather.init();
+    form.init();
 }

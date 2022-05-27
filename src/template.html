@@ -11,8 +11,8 @@
 <body>
     <header>
         <nav>
-            <form action="">
-                <input type="text" placeholder="Search Location..." name="search">
+            <form action="" id="hero-form" autocomplete="off">
+                <input type="text" class="form__search" placeholder="Search Location..." name="search">
                 <button type="submit"><i class="bi bi-search"></i></button>
             </form>
         </nav>
@@ -27,8 +27,9 @@
             <div class="weather__details weather__item">
                 <i class="weather__icon bi bi-cloud-rain-fill"></i>
                 <div class="weather__temperature">
-                    69 °F
-                    <span>| C</span>
+                    69
+                    <span class="weather__imperial"> °F</span>
+                    <span class="weather__metric">| °C</span>
                 </div>
                 <div class="weather__humidity">Humidity: 60%</div>
                 <div class="weather__wind">Wind Speed: 6.2km/h</div>
