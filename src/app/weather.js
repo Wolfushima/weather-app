@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-cycle
 import getWeatherInfo from './api-functions';
 import icons from './utils/icons';
 
@@ -16,7 +17,7 @@ const weather = {
     },
     update: (name, date, description, temp, humidity, speed, country, icon, unit) => {
         weather.name.textContent = `${name}, ${country}`;
-        weather.date.textContent = date;
+        weather.date.textContent = date.toLocaleString('en-us', { weekday: 'long', hour: 'numeric', minute: 'numeric' });
         weather.description.textContent = description;
         weather.temp.firstChild.textContent = temp;
         weather.humidity.textContent = `Humidity: ${humidity}%`;
