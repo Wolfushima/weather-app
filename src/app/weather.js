@@ -12,6 +12,7 @@ const weather = {
     imperial: document.querySelector('.weather__imperial'),
     metric: document.querySelector('.weather__metric'),
     init: () => {
+        getWeatherInfo('New York, US', 'imperial');
         weather.metric.addEventListener('click', weather.handleMetricUnit);
         weather.imperial.addEventListener('click', weather.handleImperialUnit);
     },
