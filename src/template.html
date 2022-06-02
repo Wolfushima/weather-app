@@ -20,18 +20,27 @@
     <main>
         <section class="weather">
             <div class="weather__info weather__item">
-                <h2 class="weather__location"></h2>
-                <div class="weather__date"></div>
-                <div class="weather__description"></div>
+                <div class="weather__info-container">
+                    <i class="weather__icon bi bi-cloud-rain-fill"></i>
+                    <div class="lc-dt-ds-container">
+                        <h2 class="weather__location"></h2>
+                        <div class="weather__date"></div>
+                        <div class="weather__description"></div>
+                    </div>
+                </div>
             </div>
             <div class="weather__details weather__item">
-                <i class="weather__icon bi bi-cloud-rain-fill"></i>
-                <div class="weather__temperature">
-                    <span class="weather__imperial"> °F</span>
-                    <span class="weather__metric">| °C</span>
+                <div class="weather__details-container">
+                    <div class="weather__temperature">
+                        <span class="weather__imperial display-imperial"> °F</span>
+                        <span class="pipe-symbol">|</span>
+                        <span class="weather__metric">°C </span>
+                    </div>
+                    <div class="humidity-wind-container">
+                        <div class="weather__humidity"></div>
+                        <div class="weather__wind"></div>
+                    </div>
                 </div>
-                <div class="weather__humidity"></div>
-                <div class="weather__wind"></div>
             </div>
             <div class="weather__forecast weather__item">
                 <div class="daily">

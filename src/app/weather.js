@@ -23,9 +23,9 @@ const weather = {
         weather.temp.firstChild.textContent = temp;
         weather.humidity.textContent = `Humidity: ${humidity}%`;
         if (unit === 'imperial') {
-            weather.wind.textContent = `Wind Speed: ${speed}mph`;
+            weather.wind.textContent = `Wind: ${speed}mph`;
         } else if (unit === 'metric') {
-            weather.wind.textContent = `Wind Speed: ${speed}km/h`;
+            weather.wind.textContent = `Wind: ${speed}km/h`;
         }
         weather.handleIcon(icon);
     },
@@ -38,9 +38,14 @@ const weather = {
     },
     handleImperialUnit: () => {
         getWeatherInfo(weather.name.textContent, 'imperial');
+        weather.imperial.classList.add('display-imperial');
+        weather.metric.classList.remove('display-metric');
     },
     handleMetricUnit: () => {
         getWeatherInfo(weather.name.textContent, 'metric');
+        weather.metric.classList.add('display-metric');
+        weather.imperial.classList.remove('display-imperial');
+        weather.metric.classList.add('display-metric');
     },
 };
 

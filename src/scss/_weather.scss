@@ -1,6 +1,6 @@
 .weather {
     min-height: 92vh;
-    background-color: lightblue;
+    background-color: $color-primary-100;
     position: relative;
     display: grid;
     grid-template: repeat(2, auto)/1fr 1fr;
@@ -28,17 +28,102 @@
     }
 
     &__info {
+        padding-right: 0;
+        background-color: $color-primary-100;
         grid-area: info;
         align-items:flex-start;
 
-        .weather__description {
-            text-transform: capitalize;
+        @include breakpoint-down(small) {
+            padding-right: 2rem;
+            align-items: center;
+            background-color: $color-primary-100;
+        }
+
+        .weather__info-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: max-content;
+
+            h2 {
+                font-weight: bold;
+            }
+            .weather__icon {
+                font-size: $font-xlg;
+                color: $color-primary-700;
+                margin-right: 1rem;
+            }
+
+            .weather__date {
+                color: $color-primary-600;
+            }
+
+            .weather__description {
+                font-weight: 600;
+                text-transform: capitalize;
+            }
         }
     }
 
     &__details {
+        padding-left: 0;
+        background-color: $color-primary-100;
         grid-area: details;
         align-items:flex-end;
+
+        @include breakpoint-down(small) {
+            padding-left: 2rem;
+            align-items: center;
+        }
+
+        .weather__details-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border-radius: 1rem;
+        }
+
+        .weather__temperature {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: fit-content;
+            font-size: 2.5rem;
+            white-space: pre;
+            font-weight: bold;
+            color: $color-primary-700;
+
+            .weather__imperial,
+            .weather__metric {
+                cursor: pointer;
+                color: $color-neutral-600;
+                font-weight: normal;
+            }
+
+            .pipe-symbol {
+                color: $color-neutral-700;
+            }
+
+            .display-imperial,
+            .display-metric {
+                color: $color-neutral-700;
+            }
+        }
+
+        .humidity-wind-container{
+            font-size: $font-sm;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+            .weather__humidity,
+            .weather__wind {
+                min-width: max-content;
+                color: $color-neutral-600;
+            }
+        }
     }
 
     &__forecast {
@@ -70,7 +155,8 @@
             }
 
             &__icon {
-                font-size: 50px;
+                font-size: $font-xlg;
+                color: $color-primary-700;
             }
         }
     }
