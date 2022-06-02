@@ -130,6 +130,14 @@
         grid-area: forecast;
         align-items: center;
 
+        .weather__forecast-title {
+            width: 100%;
+            color: $color-neutral-500;
+            border-bottom: 1px solid $color-neutral-400;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+        }
+
         .daily {
             width: 100%;
             display: flex;
@@ -152,6 +160,34 @@
                     flex-direction: row;
                     align-items: center;
                 }
+            }
+
+            &__day {
+                font-weight: bold;
+            }
+
+            &__max-temperature,
+            &__min-temperature {
+                color: $color-neutral-600;
+                align-self: flex-start;
+                white-space: pre;
+            }
+
+            &__day,
+            &__max-temperature,
+            &__min-temperature {
+                @include breakpoint-down(small) {
+                    margin-right: 10px;
+                    align-self: auto;
+                }
+            }
+
+            &__day,
+            &__max-temperature,
+            &__min-temperature,{
+                flex-grow: 1;
+                flex-basis: 0;
+                min-width: fit-content;
             }
 
             &__icon {

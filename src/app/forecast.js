@@ -16,7 +16,7 @@ const forecast = {
 
             dailyDay.textContent = new Date(forecastInfo[i].dt * 1000).toLocaleString('en-us', { weekday: 'long' });
             dailyTempMax.textContent = `Max: ${forecastInfo[i].max}°`;
-            dailyTempMin.textContent = `Min: ${forecastInfo[i].min}°`;
+            dailyTempMin.textContent = ` Min: ${forecastInfo[i].min}°`;
 
             forecast.handleIcon(dailyIcon, newIcon);
         }
