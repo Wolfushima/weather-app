@@ -1,9 +1,11 @@
 header {
     position: relative;
     min-height: 8vh;
+    max-height: 8vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: $color-primary-100;
 
     nav {
         position: relative;
@@ -23,6 +25,25 @@ header {
             
             input {
                 min-width: 10%;
+                width: fit-content;
+                border-radius: 10px;
+                border: none;
+                padding: 4px 50px 4px 15px;
+                outline: none;
+                height: 28px;
+                box-shadow: 1px 1px 10px $color-neutral-300;
+            }
+
+            button {
+                border-radius: 5px;
+                border: none;
+                padding: 4px;
+                background-color: rgba(255, 0, 0, 0);
+                color: hsl(214, 58%, 25%);
+                cursor: pointer;
+                min-width: 50px;
+                max-width: 50px;
+                margin-left: -50px;
             }
         }
     }
