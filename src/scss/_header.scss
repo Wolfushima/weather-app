@@ -32,6 +32,10 @@ header {
                 outline: none;
                 height: 28px;
                 box-shadow: 1px 1px 10px $color-neutral-300;
+
+                &:hover, &:focus {
+                    box-shadow: 1px 1px 10px $color-neutral-400;
+                }
             }
 
             button {
