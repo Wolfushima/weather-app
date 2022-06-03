@@ -20,3 +20,28 @@ body {
         font-size: $font-med;
     }
 }
+
+main {
+    position: relative;
+
+        .error-msg {
+            font-size: $font-xsm;
+            display: none;
+            color: $color-danger-600;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 9999;
+            height: 1.75rem;
+            width: 100%;
+            min-width: fit-content;
+            line-height: 0.875rem;
+            contain: content;
+            white-space: nowrap;
+            text-align: center;
+            padding: auto;
+        }
+}

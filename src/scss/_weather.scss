@@ -21,9 +21,11 @@
         justify-content: center;
         flex-direction: column;
         padding: 0 3rem 0 3rem;
+        padding-top: min(2rem);
 
         @include breakpoint-down(small) {
             padding: 2rem;
+            padding-top: min(2rem);
         }
 
         @include breakpoint-up(large) {
@@ -33,14 +35,12 @@
 
     &__info {
         padding-right: 0;
-        background-color: $color-primary-100;
         grid-area: info;
         align-items:flex-start;
 
         @include breakpoint-down(small) {
             padding-right: 2rem;
             align-items: center;
-            background-color: $color-primary-100;
         }
 
         .weather__info-container {
@@ -71,7 +71,6 @@
 
     &__details {
         padding-left: 0;
-        background-color: $color-primary-100;
         grid-area: details;
         align-items:flex-end;
 
@@ -133,6 +132,7 @@
     &__forecast {
         grid-area: forecast;
         align-items: center;
+        background-image: linear-gradient(to bottom, $color-primary-100, #aad5f569);
 
         .weather__forecast-title {
             width: 100%;

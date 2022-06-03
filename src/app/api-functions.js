@@ -9,7 +9,7 @@ async function getWeatherData(cityName, unit) {
         const data = await response.json();
         return data;
     } catch (err) {
-        return console.log(err);
+        return (err);
     }
 }
 
@@ -56,6 +56,7 @@ export default async function getWeatherInfo(cityName, unit) {
         weather.update(name, date, description, temp, humidity, speed, country, icon, unit);
         return;
     } catch (err) {
-        console.log(err);
+        const errorMsg = document.querySelector('.error-msg');
+        errorMsg.style.display = 'block';
     }
 }
