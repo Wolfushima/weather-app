@@ -1,6 +1,9 @@
 .weather {
     min-height: 92vh;
-    background-color: $color-primary-100;
+    background:linear-gradient(0deg, $color-primary-100, rgba(255, 255, 255, 0.505)), url('../assets/background.webp');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     position: relative;
     display: grid;
     grid-template: repeat(2, auto)/1fr 1fr;
@@ -132,7 +135,8 @@
     &__forecast {
         grid-area: forecast;
         align-items: center;
-        background-image: linear-gradient(to bottom, $color-primary-100, #aad5f569);
+        background-image: linear-gradient($color-primary-100, $color-primary-200);
+        border-top: 1px solid $color-neutral-300;
 
         .weather__forecast-title {
             width: 100%;
